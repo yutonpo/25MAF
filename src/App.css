@@ -1,0 +1,168 @@
+/* フォントと基本レイアウト */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: #f3f4f6; /* Tailwindのgray-100に相当 */
+  margin: 0;
+  padding: 0;
+}
+
+/* タイトル背景 */
+.title-section {
+  background-image: url("/tokyo-background.jpg"); /* public フォルダ内画像 */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.title-main {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.title-sub {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* ルールブロック */
+.rules-section {
+  background-color: #fbd38d; /* Tailwindのorange-200 に近い */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.rule-box {
+  background-color: #fff9db;
+  border: 2px solid #f6e05e;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* ミッションカード */
+.mission-card {
+  background-color: #fff7e6;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 160px;
+  margin: 0.5rem auto;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.mission-genre {
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #dd6b20;
+}
+
+.mission-score {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  color: #4a5568;
+}
+
+.mission-text {
+  margin-top: 0.5rem;
+  color: #2d3748;
+}
+
+/* ミッションの達成状態 */
+.mission-done {
+  border: 2px solid #38a169;
+  background-color: #e6fffa;
+}
+
+.mission-pending {
+  opacity: 0.6;
+}
+
+/* カルーセルラップ */
+.carousel-container {
+  padding: 1rem 0;
+}
+
+/* ランキング */
+.ranking-section {
+  background-color: #bee3f8; /* Tailwindのblue-200 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.rank-box {
+  background-color: white;
+  padding: 0.5rem;
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 90%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.rank-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.rank-score {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.mission-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mission-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 横3列 */
+  grid-template-rows: repeat(4, auto); /* 縦4行（自動高さ） */
+  gap: 1rem;
+  justify-items: center;
+}
+
+.mission-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 250px;
+  background-color: #fffefc;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ranking {
+  padding: 1rem;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.ranking ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* スマホ優先レイアウト */
+@media screen and (min-width: 768px) {
+  .title-main {
+    font-size: 2rem;
+  }
+
+  .mission-card {
+    max-width: 180px;
+  }
+
+  .rank-box {
+    width: 70%;
+  }
+}
